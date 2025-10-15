@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    cout << "Sum: " << a + b << endl;
+    cout << "Difference: " << a - b << endl;
+    cout << "Product: " << a * b << endl;
+    if (b != 0)
+        cout << "Quotient: " << a / b << endl;
+    else
+        cout << "Quotient: undefined" << endl;
+
+    int x, y, z;
+    cout << "Enter three numbers: ";
+    cin >> x >> y >> z;
+    // Find largest
+    int largest = x;
+    if (y > largest) largest = y;
+    if (z > largest) largest = z;
+    // Find smallest
+    int smallest = x;
+    if (y < smallest) smallest = y;
+    if (z < smallest) smallest = z;
+    cout << "Largest: " << largest << endl;
+    cout << "Smallest: " << smallest << endl;
+    if (x == y && y == z)
+        cout << "All numbers are equal" << endl;
+    else
+        cout << "All numbers are not equal" << endl;
+    return 0;
+}

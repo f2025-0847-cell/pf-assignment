@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main() {
+    float a, b;
+    cout << "Enter two floating point numbers: ";
+    cin >> a >> b;
+    cout << fixed << setprecision(3);
+    cout << "Sum: " << a + b << endl;
+    cout << "Difference: " << a - b << endl;
+    cout << "Product: " << a * b << endl;
+    if (b != 0)
+        cout << "Quotient: " << a / b << endl;
+    else
+        cout << "Quotient: undefined" << endl;
+    // Now cast to int and show results
+    int ai = static_cast<int>(a);
+    int bi = static_cast<int>(b);
+    cout << "\nAfter casting to int (fractional part removed):" << endl;
+    cout << "Sum: " << ai + bi << endl;
+    cout << "Difference: " << ai - bi << endl;
+    cout << "Product: " << ai * bi << endl;
+    if (bi != 0)
+        cout << "Quotient: " << ai / bi << endl;
+    else
+        cout << "Quotient: undefined" << endl;
+    // Difference: integer division discards fractions, and casting removes decimals.
+    return 0;
+}
